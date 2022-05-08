@@ -7,8 +7,10 @@ dotenv.config()
 
 const app = express()
 
+mongoose.connect(process.env.MONGODB)
+
 app.use(bodyParser.json())
 
 app.listen(process.env.Port, () => {
-  console.log('server start122')
+  console.log('server start')
 })
